@@ -4,7 +4,7 @@ import argparse
 import socket
 import threading
 from typing import Optional
-
+import sys
 from latency_change_divert import DivertConfig, DivertLatencyController, require_admin
 # NEW IMPORTS
 from obs_control import start_obs, stop_obs, start_obs_all, stop_obs_all, register_obs_ip
@@ -50,7 +50,51 @@ def stop_app():
 
     os.remove(PID_FILE)
 
+BASE_DIR_SERVER = os.path.dirname(os.path.abspath(__file__))
+SERVER_PATH = os.path.join(BASE_DIR_SERVER, "server.py")
+PID_FILE_SERVER = os.path.join(BASE_DIR_SERVER, "server.pid")
 
+
+def start_server():
+    if os.path.exists(PID_FILE_SERVER):
+        print("Server is already running")
+        return
+
+    p = subprocess.Popen(
+        [sys.executable, SERVER_PATH],   # dùng đúng python đang chạy
+        cwd=BASE_DIR_SERVER,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL
+    )
+
+    with open(PID_FILE_SERVER, "w") as f:
+        f.write(str(p.pid))
+
+    print("turned on server.py")
+
+
+def stop_server():
+    if not os.path.exists(PID_FILE_SERVER):
+        print("Server is not running")
+        return
+
+    with open(PID_FILE_SERVER) as f:
+        pid = int(f.read())
+
+    try:
+        process = psutil.Process(pid)
+        process.terminate()
+        process.wait(timeout=5)
+        print("turned off server.py")
+
+    except psutil.NoSuchProcess:
+        print("Server was already shut down")
+
+    except psutil.TimeoutExpired:
+        process.kill()
+        print("Server force killed")
+
+    os.remove(PID_FILE_SERVER)
 
 def _send_line(sock_file, text: str) -> None:
     sock_file.write((text + "\n").encode("utf-8"))
@@ -209,7 +253,24 @@ def run_server(
                         _send_line(sock_file, f"ERR failed to stop OBS for all IPs: {e}")
                         print(f"[tcp_server] Failed to stop OBS for all IPs: {e}")
                     continue
-
+                if cmd_name == "SERVER_ON":
+                    try:
+                        start_server()
+                        _send_line(sock_file, "OK server started")
+                        print("[tcp_server] Server started via SERVER_ON")
+                    except Exception as e:
+                        _send_line(sock_file, f"ERR failed to start server: {e}")
+                        print(f"[tcp_server] Failed to start server: {e}")
+                    continue
+                if cmd_name == "SERVER_OFF":
+                    try:
+                        stop_server()
+                        _send_line(sock_file, "OK server stopped")
+                        print("[tcp_server] Server stopped via SERVER_OFF")
+                    except Exception as e:
+                        _send_line(sock_file, f"ERR failed to stop server: {e}")
+                        print(f"[tcp_server] Failed to stop server: {e}")
+                    continue
                 # NEW: INPUT CONTROL repurposed to control Minh/app.py activity tracker
                 if cmd_name == "INPUT_ON":
                     try:
