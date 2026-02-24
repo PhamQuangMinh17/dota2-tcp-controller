@@ -1,0 +1,5496 @@
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903662
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 98,
+    "clock_time": -25,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6689,
+    "ypos": -6249,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 42,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903664
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 101,
+    "clock_time": -22,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6689,
+    "ypos": -6249,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 39,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 98,
+      "clock_time": -25
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 42
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903666
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 102,
+    "clock_time": -21,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6689,
+    "ypos": -6249,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 38,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 101,
+      "clock_time": -22
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 39
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903667
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 103,
+    "clock_time": -20,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6689,
+    "ypos": -6249,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 37,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 102,
+      "clock_time": -21
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 38
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903668
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 105,
+    "clock_time": -19,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6689,
+    "ypos": -6249,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 36,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 103,
+      "clock_time": -20
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 37
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903669
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 106,
+    "clock_time": -17,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6689,
+    "ypos": -6249,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 35,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 105,
+      "clock_time": -19
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 36
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903670
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 107,
+    "clock_time": -16,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6673,
+    "ypos": -6179,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 33,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 106,
+      "clock_time": -17
+    },
+    "hero": {
+      "xpos": -6689,
+      "ypos": -6249
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 35
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903672
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 108,
+    "clock_time": -15,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6361,
+    "ypos": -6022,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 32,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 107,
+      "clock_time": -16
+    },
+    "hero": {
+      "xpos": -6673,
+      "ypos": -6179
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 33
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903673
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 109,
+    "clock_time": -14,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 8,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -6033,
+    "ypos": -5824,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 31,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 108,
+      "clock_time": -15
+    },
+    "hero": {
+      "xpos": -6361,
+      "ypos": -6022
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 32
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903674
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 111,
+    "clock_time": -12,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 19,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -5688,
+    "ypos": -5608,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 30,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 109,
+      "clock_time": -14
+    },
+    "player": {
+      "commands_issued": 8
+    },
+    "hero": {
+      "xpos": -6033,
+      "ypos": -5824
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 31
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903675
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 112,
+    "clock_time": -11,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 19,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -5388,
+    "ypos": -5400,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 28,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 111,
+      "clock_time": -12
+    },
+    "hero": {
+      "xpos": -5688,
+      "ypos": -5608
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 30
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903677
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 113,
+    "clock_time": -10,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 19,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -5087,
+    "ypos": -5159,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 27,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 112,
+      "clock_time": -11
+    },
+    "hero": {
+      "xpos": -5388,
+      "ypos": -5400
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 28
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903678
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 114,
+    "clock_time": -9,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 19,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -4791,
+    "ypos": -4905,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 26,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 113,
+      "clock_time": -10
+    },
+    "hero": {
+      "xpos": -5087,
+      "ypos": -5159
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 27
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903679
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 115,
+    "clock_time": -8,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 25,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -4525,
+    "ypos": -4668,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 25,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 114,
+      "clock_time": -9
+    },
+    "player": {
+      "commands_issued": 19
+    },
+    "hero": {
+      "xpos": -4791,
+      "ypos": -4905
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 26
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903680
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 117,
+    "clock_time": -7,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 25,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -4323,
+    "ypos": -4351,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 24,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 115,
+      "clock_time": -8
+    },
+    "hero": {
+      "xpos": -4525,
+      "ypos": -4668
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 25
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903681
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 118,
+    "clock_time": -5,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 25,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -4107,
+    "ypos": -4053,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 22,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 117,
+      "clock_time": -7
+    },
+    "hero": {
+      "xpos": -4323,
+      "ypos": -4351
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 24
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}
+{
+  "provider": {
+    "name": "Dota 2",
+    "appid": 570,
+    "version": 48,
+    "timestamp": 1771903683
+  },
+  "map": {
+    "name": "start",
+    "matchid": "0",
+    "game_time": 119,
+    "clock_time": -4,
+    "daytime": false,
+    "nightstalker_night": false,
+    "radiant_score": 0,
+    "dire_score": 0,
+    "game_state": "DOTA_GAMERULES_STATE_PRE_GAME",
+    "paused": false,
+    "win_team": "none",
+    "customgamename": "",
+    "ward_purchase_cooldown": 0
+  },
+  "player": {
+    "steamid": "76561198781085397",
+    "accountid": "820819669",
+    "name": "huy.quoc1205",
+    "activity": "playing",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 0,
+    "last_hits": 0,
+    "denies": 0,
+    "kill_streak": 0,
+    "commands_issued": 25,
+    "kill_list": {},
+    "team_name": "radiant",
+    "player_slot": 0,
+    "team_slot": 0,
+    "gold": 600,
+    "gold_reliable": 0,
+    "gold_unreliable": 600,
+    "gold_from_hero_kills": 0,
+    "gold_from_creep_kills": 0,
+    "gold_from_income": 0,
+    "gold_from_shared": 0,
+    "gpm": 0,
+    "xpm": 0
+  },
+  "hero": {
+    "facet": 1,
+    "xpos": -3861,
+    "ypos": -3797,
+    "id": 76,
+    "name": "npc_dota_hero_obsidian_destroyer",
+    "level": 1,
+    "xp": 0,
+    "alive": true,
+    "respawn_seconds": 0,
+    "buyback_cost": 246,
+    "buyback_cooldown": 0,
+    "health": 582,
+    "max_health": 582,
+    "health_percent": 100,
+    "mana": 510,
+    "max_mana": 510,
+    "mana_percent": 100,
+    "silenced": false,
+    "stunned": false,
+    "disarmed": false,
+    "magicimmune": false,
+    "hexed": false,
+    "muted": false,
+    "break": false,
+    "aghanims_scepter": false,
+    "aghanims_shard": false,
+    "smoked": false,
+    "permanent_buffs": {},
+    "has_debuff": false,
+    "talent_1": false,
+    "talent_2": false,
+    "talent_3": false,
+    "talent_4": false,
+    "talent_5": false,
+    "talent_6": false,
+    "talent_7": false,
+    "talent_8": false,
+    "attributes_level": 0
+  },
+  "abilities": {
+    "ability0": {
+      "name": "obsidian_destroyer_arcane_orb",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability1": {
+      "name": "obsidian_destroyer_astral_imprisonment",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability2": {
+      "name": "obsidian_destroyer_equilibrium",
+      "level": 0,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability3": {
+      "name": "obsidian_destroyer_ominous_discernment",
+      "level": 1,
+      "can_cast": false,
+      "passive": true,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": false
+    },
+    "ability4": {
+      "name": "obsidian_destroyer_sanity_eclipse",
+      "level": 0,
+      "can_cast": false,
+      "passive": false,
+      "ability_active": true,
+      "cooldown": 0,
+      "max_cooldown": 0,
+      "ultimate": true
+    }
+  },
+  "items": {
+    "slot0": {
+      "name": "empty"
+    },
+    "slot1": {
+      "name": "empty"
+    },
+    "slot2": {
+      "name": "empty"
+    },
+    "slot3": {
+      "name": "empty"
+    },
+    "slot4": {
+      "name": "empty"
+    },
+    "slot5": {
+      "name": "empty"
+    },
+    "slot6": {
+      "name": "empty"
+    },
+    "slot7": {
+      "name": "empty"
+    },
+    "slot8": {
+      "name": "empty"
+    },
+    "stash0": {
+      "name": "empty"
+    },
+    "stash1": {
+      "name": "empty"
+    },
+    "stash2": {
+      "name": "empty"
+    },
+    "stash3": {
+      "name": "empty"
+    },
+    "stash4": {
+      "name": "empty"
+    },
+    "stash5": {
+      "name": "empty"
+    },
+    "teleport0": {
+      "name": "item_tpscroll",
+      "purchaser": 0,
+      "item_level": 1,
+      "can_cast": false,
+      "cooldown": 21,
+      "max_cooldown": 101,
+      "passive": false,
+      "item_charges": 1,
+      "charges": 1
+    },
+    "neutral0": {
+      "name": "empty"
+    },
+    "neutral1": {
+      "name": "empty"
+    },
+    "preserved_neutral6": {
+      "name": "empty"
+    },
+    "preserved_neutral7": {
+      "name": "empty"
+    },
+    "preserved_neutral8": {
+      "name": "empty"
+    },
+    "preserved_neutral9": {
+      "name": "empty"
+    },
+    "preserved_neutral10": {
+      "name": "empty"
+    }
+  },
+  "draft": {},
+  "buildings": {
+    "radiant": {
+      "dota_goodguys_tower1_top": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_top": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_mid": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_mid": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower1_bot": {
+        "health": 1800,
+        "max_health": 1800
+      },
+      "dota_goodguys_tower2_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower3_bot": {
+        "health": 2500,
+        "max_health": 2500
+      },
+      "dota_goodguys_tower4_top": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "dota_goodguys_tower4_bot": {
+        "health": 2600,
+        "max_health": 2600
+      },
+      "good_rax_melee_top": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_top": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_mid": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_mid": {
+        "health": 1300,
+        "max_health": 1300
+      },
+      "good_rax_melee_bot": {
+        "health": 2200,
+        "max_health": 2200
+      },
+      "good_rax_range_bot": {
+        "health": 1300,
+        "max_health": 1300
+      }
+    }
+  },
+  "wearables": {
+    "wearable0": 189,
+    "wearable1": 190,
+    "wearable2": 187,
+    "wearable3": 188,
+    "wearable4": 8632,
+    "wearable5": 226,
+    "wearable6": 533,
+    "wearable7": 791,
+    "wearable8": 793,
+    "wearable9": 816,
+    "wearable10": 14912,
+    "wearable11": 36173
+  },
+  "previously": {
+    "map": {
+      "game_time": 118,
+      "clock_time": -5
+    },
+    "hero": {
+      "xpos": -4107,
+      "ypos": -4053
+    },
+    "items": {
+      "teleport0": {
+        "cooldown": 22
+      }
+    }
+  },
+  "auth": {
+    "token": "my_secret_token_12345"
+  }
+}

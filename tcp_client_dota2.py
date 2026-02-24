@@ -604,6 +604,7 @@ def run_client(
     print("  obs all on [match]      -> send OBS_ON_ALL to ALL servers")
     print("  obs all off             -> send OBS_OFF_ALL to ALL servers")
     print("  input on/off            -> send INPUT_ON / INPUT_OFF to ALL servers")
+    print("  server on/off           -> send SERVER_ON / SERVER_OFF to ALL servers")
     print("  quit                    -> stop schedule + send QUIT to ALL servers\n")
 
     while True:
@@ -703,6 +704,9 @@ def run_client(
             print("[tcp_client] Turning INPUT ON on ALL servers ...")
             _print_broadcast_results(pool.broadcast_collect("INPUT_ON"))
 
+            print("[tcp_client] turning SERVER ON on ALL servers ...")
+            _print_broadcast_results(pool.broadcast_collect("SERVER_ON"))
+
             if cmd == "start_exp_1":
                 # Baseline: no latency
                 exp_active = "exp1"
@@ -718,6 +722,7 @@ def run_client(
                 print("[tcp_client] Rolling back: stopping OBS (all) and INPUT (all) ...")
                 _print_broadcast_results(pool.broadcast_collect("OBS_OFF_ALL"))
                 _print_broadcast_results(pool.broadcast_collect("INPUT_OFF"))
+                _print_broadcast_results(pool.broadcast_collect("SERVER_OFF"))
                 continue
 
             interval_sec = 5 * 60  # 5 minutes
@@ -889,7 +894,15 @@ def run_client(
 
             _print_broadcast_results(pool.broadcast_collect(server_cmd))
             continue
+        if cmd == "server":
+            if len(parts) != 2 or parts[1].lower() not in ("on", "off"):
+                print("[tcp_client] Usage: server on|off")
+                continue
+            sub = parts[1].lower()
+            server_cmd = "SERVER_ON" if sub == "on" else "SERVER_OFF"
 
+            _print_broadcast_results(pool.broadcast_collect(server_cmd))
+            continue
         if cmd == "quit":
             # If an experiment is active, behave like "stop" first (so OBS/app doesn't keep running)
             scheduler.stop()
