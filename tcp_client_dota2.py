@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import socket
 import threading
+import random
 from dataclasses import dataclass
 from typing import Dict, Optional, Tuple, List
 
@@ -143,6 +144,34 @@ DEFAULT_START_SCHEDULE = "0:5,50:5,100:5,200:5"
 
 
 # ---------------------------
+# EXP3 sequences (Random walk)
+# ---------------------------
+
+EXP3_LATENCY_SEQUENCES: List[List[int]] = [
+    # Seq 1
+    [50, 40, 50, 60, 50, 40, 30, 20, 10, 0, 10, 20, 10, 20, 10, 20, 30, 40, 50, 60, 70, 60, 70, 80, 90, 80, 90, 100, 100, 90, 100],
+    # Seq 2
+    [50, 60, 70, 80, 90, 100, 90, 80, 70, 80, 90, 80, 70, 60, 50, 40, 30, 40, 30, 40, 30, 40, 50, 40, 30, 20, 10, 0, 0, 10, 0],
+    # Seq 3
+    [50, 60, 70, 80, 70, 60, 50, 40, 50, 60, 70, 80, 90, 100, 90, 80, 70, 60, 50, 40, 30, 40, 30, 20, 10, 0, 10, 20, 10, 20, 30],
+    # Seq 4
+    [50, 60, 70, 80, 90, 100, 90, 80, 70, 80, 70, 60, 50, 40, 30, 20, 10, 0, 10, 0, 0, 10, 20, 30, 40, 50, 40, 50, 60, 70, 80],
+    # Seq 5
+    [50, 60, 50, 40, 30, 40, 50, 40, 30, 20, 10, 0, 0, 10, 20, 30, 40, 30, 40, 50, 60, 70, 80, 70, 80, 90, 80, 90, 80, 90, 100],
+    # Seq 6
+    [50, 60, 70, 80, 90, 100, 90, 80, 90, 80, 70, 80, 70, 60, 50, 40, 50, 60, 50, 40, 30, 40, 30, 20, 10, 20, 10, 0, 0, 0, 0],
+    # Seq 7
+    [50, 60, 50, 60, 70, 80, 90, 100, 90, 80, 90, 80, 90, 80, 70, 60, 50, 40, 50, 40, 30, 20, 10, 0, 10, 20, 30, 20, 30, 40, 30],
+    # Seq 8
+    [50, 40, 30, 20, 30, 40, 30, 20, 10, 0, 10, 20, 30, 40, 50, 60, 50, 60, 50, 60, 70, 80, 90, 100, 90, 100, 100, 90, 100, 100, 100],
+    # Seq 9
+    [50, 60, 50, 60, 70, 80, 90, 100, 90, 100, 100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0, 10, 0, 0, 10, 20, 30, 40, 50, 60, 70],
+    # Seq 10
+    [50, 40, 30, 40, 30, 20, 10, 0, 10, 0, 10, 20, 30, 40, 50, 40, 50, 60, 70, 60, 50, 60, 70, 80, 70, 80, 90, 100, 100, 90, 80],
+]
+
+
+# ---------------------------
 # Networking / command channel
 # ---------------------------
 
@@ -239,7 +268,10 @@ class ConnectionPool:
       - send to a specific server (by host)
       - thread-safe removal on failure
 
-    - number/team management helpers used by "servers/delete/move/swap"
+    Plus:
+      - number/team management used by "servers/delete/move/swap"
+      - targeted send to a team
+      - allocate number for newly connected servers
     """
     def __init__(self):
         self._lock = threading.RLock()
@@ -257,10 +289,9 @@ class ConnectionPool:
         with self._lock:
             return list(self._conns.values())
 
-    def conns_for_team(self, team: str) -> List[ServerConnection]:
-        t = _normalize_team(team)
+    def get_by_label(self, label: str) -> Optional[ServerConnection]:
         with self._lock:
-            return [c for c in self._conns.values() if (c.team or "").upper() == t]
+            return self._conns.get(label)
 
     def get_by_host(self, host: str) -> Optional[ServerConnection]:
         with self._lock:
@@ -289,6 +320,22 @@ class ConnectionPool:
         for lbl in self.labels():
             self.remove_label(lbl)
 
+    def used_numbers(self) -> set:
+        with self._lock:
+            return {c.number for c in self._conns.values() if c.number is not None}
+
+    def count_team(self, team: str) -> int:
+        t = _normalize_team(team)
+        with self._lock:
+            return sum(1 for c in self._conns.values() if (c.team or "").upper() == t)
+
+    def allocate_number(self, max_n: int = 10) -> Optional[int]:
+        used = self.used_numbers()
+        for n in range(1, max_n + 1):
+            if n not in used:
+                return n
+        return None
+
     def broadcast_collect(self, cmd: str) -> Dict[str, str]:
         """
         Send a command to ALL servers.
@@ -314,8 +361,9 @@ class ConnectionPool:
 
     def team_collect(self, team: str, cmd: str) -> Dict[str, str]:
         """
-        Send a command to all servers in one team (A or B).
-        Returns label -> response. Removes dead connections.
+        Send a command only to servers in a given team (A or B).
+        Returns dict label -> response.
+        Removes dead servers on error.
         """
         t = _normalize_team(team)
         with self._lock:
@@ -367,11 +415,11 @@ class ConnectionPool:
         team_other = sorted([c for c in conns if (c.team or "").upper() not in ("A", "B")], key=_num)
 
         print("\n[tcp_client] Connected servers by team:")
-        print(f"  Team A (team 1) ({len(team_a)}/5):")
+        print(f"  Team A ({len(team_a)}/5):")
         for c in team_a:
             n = c.number if c.number is not None else "?"
             print(f"    {n:>2}) {c.label}")
-        print(f"  Team B (team 2) ({len(team_b)}/5):")
+        print(f"  Team B ({len(team_b)}/5):")
         for c in team_b:
             n = c.number if c.number is not None else "?"
             print(f"    {n:>2}) {c.label}")
@@ -382,9 +430,10 @@ class ConnectionPool:
                 print(f"    {n:>2}) {c.label}")
 
         print("\n[tcp_client] Server management commands:")
-        print("  delete <number>            -> remove server + renumber 1..N")
-        print("  move <number> to A|B       -> move one server to another team")
-        print("  swap <n1> <n2>             -> swap teams of two servers (like swap 2 7)")
+        print("  connect to <ip1> <ip2> ...      -> connect/reconnect (HOST[:PORT], commas allowed)")
+        print("  delete <number>                 -> remove server + renumber 1..N")
+        print("  move <number> to A|B            -> move one server to another team")
+        print("  swap <n1> <n2>                  -> swap teams of two servers (like swap 2 7)")
         print("")
 
     def delete_number(self, number: int) -> bool:
@@ -437,7 +486,7 @@ class ConnectionPool:
 
 class ScheduleRunner:
     """
-    Runs SET_LATENCY schedule across ALL connected servers OR one team.
+    Runs SET_LATENCY schedule across ALL connected servers in a background thread.
     """
     def __init__(self, pool: ConnectionPool):
         self.pool = pool
@@ -447,12 +496,7 @@ class ScheduleRunner:
     def running(self) -> bool:
         return self._thread is not None and self._thread.is_alive()
 
-    def start(
-        self,
-        schedule_items: List[Tuple[int, float]],
-        loop: bool = True,
-        team: Optional[str] = None,  # None = ALL, else "A"/"B"
-    ) -> None:
+    def start(self, schedule_items: List[Tuple[int, float]], loop: bool = True) -> None:
         if not schedule_items:
             raise ValueError("Schedule is empty.")
         if self.running():
@@ -463,23 +507,10 @@ class ScheduleRunner:
             print("[tcp_client] No connected servers. Cannot start schedule.")
             return
 
-        target_desc = "ALL servers"
-        team_norm: Optional[str] = None
-        if team is not None:
-            try:
-                team_norm = _normalize_team(team)
-            except Exception:
-                print("[tcp_client] Invalid team for schedule. Use A or B.")
-                return
-            if not self.pool.conns_for_team(team_norm):
-                print(f"[tcp_client] No connected servers in Team {team_norm}. Cannot start schedule.")
-                return
-            target_desc = f"Team {team_norm} only"
-
         self._stop_evt.clear()
 
         def _worker():
-            print(f"[tcp_client] Schedule mode started ({target_desc}).")
+            print("[tcp_client] Schedule mode started (ALL servers).")
             print("[tcp_client] Schedule items:", schedule_items)
             print("[tcp_client] Type 'stop' to stop schedule.\n")
             try:
@@ -487,14 +518,9 @@ class ScheduleRunner:
                     for lat_ms, duration_sec in schedule_items:
                         if self._stop_evt.is_set():
                             break
-                        if team_norm is None:
-                            res = self.pool.broadcast_collect(f"SET_LATENCY {lat_ms}")
-                        else:
-                            res = self.pool.team_collect(team_norm, f"SET_LATENCY {lat_ms}")
-
+                        res = self.pool.broadcast_collect(f"SET_LATENCY {lat_ms}")
                         for lbl, resp in res.items():
                             print(f"[tcp_client] ({lbl}) SET_LATENCY {lat_ms} -> {resp}")
-
                         if self._stop_evt.wait(duration_sec):
                             break
                     if not loop:
@@ -508,7 +534,170 @@ class ScheduleRunner:
 
     def stop(self) -> None:
         if not self.running():
-            print("[tcp_client] Schedule is not running.")
+            return
+        self._stop_evt.set()
+        self._thread.join(timeout=2.0)
+
+
+class Exp2Runner:
+    """
+    Experiment 2 latency runner:
+      - Only Team A (team1)
+      - Values: 0,20,40,60,80,100 ms
+      - Shuffled each 30-min cycle
+      - 5 minutes per value
+      - Loop forever until stop()
+    """
+    def __init__(self, pool: ConnectionPool, team: str = "A"):
+        self.pool = pool
+        self.team = _normalize_team(team)
+        self.block_sec = 5 * 60.0
+
+        self._thread: Optional[threading.Thread] = None
+        self._stop_evt = threading.Event()
+
+    def running(self) -> bool:
+        return self._thread is not None and self._thread.is_alive()
+
+    def start(self) -> None:
+        if self.running():
+            print("[tcp_client] start_exp_2 latency runner already running. Type 'stop' first.")
+            return
+
+        self._stop_evt.clear()
+
+        def _worker():
+            base = [0, 20, 40, 60, 80, 100]
+            last_seq: Optional[List[int]] = None
+            cycle = 0
+            print(f"[tcp_client] EXP2 latency loop started for Team {self.team}.")
+            print("[tcp_client] Discrete latencies:", base)
+            print("[tcp_client] 5 minutes per value; new shuffle each 30-minute cycle.")
+            print("[tcp_client] Type 'stop' to stop exp2.\n")
+
+            try:
+                while not self._stop_evt.is_set():
+                    cycle += 1
+
+                    seq = base.copy()
+                    # Ensure different from last cycle (as requested)
+                    for _ in range(20):
+                        random.shuffle(seq)
+                        if last_seq is None or seq != last_seq:
+                            break
+                    last_seq = seq
+
+                    print(f"[tcp_client] EXP2 cycle {cycle} shuffle: {seq}")
+
+                    for lat in seq:
+                        if self._stop_evt.is_set():
+                            break
+
+                        res = self.pool.team_collect(self.team, f"SET_LATENCY {lat}")
+                        if not res:
+                            print(f"[tcp_client] (Team {self.team}) No servers to apply latency {lat} ms.")
+                        else:
+                            for lbl, resp in res.items():
+                                print(f"[tcp_client] (Team {self.team}) ({lbl}) SET_LATENCY {lat} -> {resp}")
+
+                        # 5 minutes per latency value
+                        if self._stop_evt.wait(self.block_sec):
+                            break
+
+            except Exception as e:
+                print(f"[tcp_client] EXP2 latency thread error: {e}")
+
+            print("[tcp_client] EXP2 latency loop stopped.\n")
+
+        self._thread = threading.Thread(target=_worker, name="exp2-latency", daemon=True)
+        self._thread.start()
+
+    def stop(self) -> None:
+        if not self.running():
+            return
+        self._stop_evt.set()
+        self._thread.join(timeout=2.0)
+
+
+class Exp3Runner:
+    """
+    Experiment 3 latency runner (Random Walk sequences):
+      - Only Team A (team1)
+      - Uses 1 randomly chosen sequence out of 10
+      - 1 minute per value
+      - Full pass = 30 minutes (we use the first 30 values of the sequence)
+      - Loop back to the first value of the same sequence forever until stop()
+    """
+    def __init__(self, pool: ConnectionPool, team: str = "A"):
+        self.pool = pool
+        self.team = _normalize_team(team)
+        self.block_sec = 60.0  # 1 minute per latency value
+
+        self._thread: Optional[threading.Thread] = None
+        self._stop_evt = threading.Event()
+
+        self._seq_id: Optional[int] = None
+        self._seq_blocks: Optional[List[int]] = None
+
+    def running(self) -> bool:
+        return self._thread is not None and self._thread.is_alive()
+
+    def start(self) -> None:
+        if self.running():
+            print("[tcp_client] start_exp_3 latency runner already running. Type 'stop' first.")
+            return
+
+        # Choose 1 sequence at random (1..10)
+        seq_idx = random.randrange(0, len(EXP3_LATENCY_SEQUENCES))
+        raw_seq = EXP3_LATENCY_SEQUENCES[seq_idx]
+
+        # Spec says: 30 minutes total. Provided sequences have 31 values; we use first 30.
+        seq_blocks = raw_seq[:30] if len(raw_seq) >= 30 else raw_seq.copy()
+
+        self._seq_id = seq_idx + 1
+        self._seq_blocks = seq_blocks
+
+        self._stop_evt.clear()
+
+        def _worker():
+            assert self._seq_id is not None
+            assert self._seq_blocks is not None
+
+            print(f"[tcp_client] EXP3 latency loop started for Team {self.team}.")
+            print(f"[tcp_client] Using sequence #{self._seq_id}.")
+            print("[tcp_client] 1 minute per value; full pass 30 minutes; loop same sequence.")
+            print("[tcp_client] Type 'stop' to stop exp3.\n")
+
+            cycle = 0
+            try:
+                while not self._stop_evt.is_set():
+                    cycle += 1
+                    print(f"[tcp_client] EXP3 cycle {cycle} (sequence #{self._seq_id})")
+
+                    for lat in self._seq_blocks:
+                        if self._stop_evt.is_set():
+                            break
+
+                        res = self.pool.team_collect(self.team, f"SET_LATENCY {lat}")
+                        if not res:
+                            print(f"[tcp_client] (Team {self.team}) No servers to apply latency {lat} ms.")
+                        else:
+                            for lbl, resp in res.items():
+                                print(f"[tcp_client] (Team {self.team}) ({lbl}) SET_LATENCY {lat} -> {resp}")
+
+                        if self._stop_evt.wait(self.block_sec):
+                            break
+
+            except Exception as e:
+                print(f"[tcp_client] EXP3 latency thread error: {e}")
+
+            print("[tcp_client] EXP3 latency loop stopped.\n")
+
+        self._thread = threading.Thread(target=_worker, name="exp3-latency", daemon=True)
+        self._thread.start()
+
+    def stop(self) -> None:
+        if not self.running():
             return
         self._stop_evt.set()
         self._thread.join(timeout=2.0)
@@ -532,21 +721,39 @@ def _parse_server_item(item: str, default_port: int) -> Tuple[str, int]:
     return s, default_port
 
 
-def _print_broadcast_results(results: Dict[str, str], prefix: str = "tcp_server") -> None:
-    for lbl, resp in results.items():
-        print(f"[{prefix}:{lbl}] {resp}")
+def _parse_connect_targets(user_line: str) -> List[str]:
+    """
+    Parse a line like:
+      "connect to 1.2.3.4, 5.6.7.8 9.9.9.9:5001"
+    into tokens:
+      ["1.2.3.4", "5.6.7.8", "9.9.9.9:5001"]
+    """
+    s = user_line.strip()
+
+    # remove leading "connect"
+    if s.lower().startswith("connect"):
+        s = s[len("connect"):].strip()
+
+    # optional "to"
+    if s.lower().startswith("to "):
+        s = s[3:].strip()
+
+    # commas -> spaces
+    s = s.replace(",", " ")
+    toks = [t.strip() for t in s.split() if t.strip()]
+    return toks
 
 
 def run_client(
     servers: List[Tuple[str, int]],
     client_name: str,
     connect_timeout_sec: float,
+    default_port: int,
 ) -> int:
     pool = ConnectionPool()
 
     # Connect to all servers at startup
     print("[tcp_client] Connecting to servers:")
-    next_number = 1
     for host, port in servers:
         label = f"{host}:{port}"
         try:
@@ -558,15 +765,24 @@ def run_client(
             )
             conn.connect()
 
-            if next_number > 10:
-                # Hard limit requested (1..10)
+            number = pool.allocate_number(max_n=10)
+            if number is None:
                 conn.close()
                 print(f"  ❌ {label}  (too many servers: max 10)")
                 continue
 
-            conn.number = next_number
-            conn.team = "A" if next_number <= 5 else "B"
-            next_number += 1
+            # default team fill (A then B)
+            team_a = pool.count_team("A")
+            team_b = pool.count_team("B")
+            if team_a < 5:
+                team = "A"
+            elif team_b < 5:
+                team = "B"
+            else:
+                team = "A" if team_a <= team_b else "B"
+
+            conn.number = number
+            conn.team = team
 
             pool.add(conn)
             print(f"  ✅ {label}  (# {conn.number}, Team {conn.team})")
@@ -578,33 +794,47 @@ def run_client(
         return 1
 
     scheduler = ScheduleRunner(pool)
+    exp2_runner = Exp2Runner(pool, team="A")
+    exp3_runner = Exp3Runner(pool, team="A")
+    exp_mode: Optional[str] = None  # None | "exp1" | "exp2" | "exp3"
 
-    # experiment state
-    exp_active: Optional[str] = None  # "exp1" | "exp2" | "exp3" | None
+    def _print_result_map(prefix: str, res: Dict[str, str]) -> None:
+        for lbl, resp in res.items():
+            print(f"{prefix}{lbl}] {resp}")
 
-    print("\n[tcp_client] Commands (latency commands apply to ALL servers unless stated):")
-    print("  servers                 -> list connected servers (with Team A/B + numbers)")
-    print("  delete <number>         -> delete server + renumber")
-    print("  move <number> to A|B    -> move a server to another team")
-    print("  swap <n1> <n2>          -> swap teams of two servers (example: swap 2 7)")
+    def _stop_any_modes() -> None:
+        nonlocal exp_mode
+        if scheduler.running():
+            scheduler.stop()
+        if exp2_runner.running():
+            exp2_runner.stop()
+        if exp3_runner.running():
+            exp3_runner.stop()
+        exp_mode = None
+
+    print("\n[tcp_client] Commands (latency commands apply to ALL connected servers by default):")
+    print("  servers                         -> list connected servers (Team A/B + numbers)")
+    print("  connect to <ip1> <ip2> ...       -> connect/reconnect servers (HOST[:PORT], commas allowed)")
+    print("  delete <number>                 -> delete server + renumber")
+    print("  move <number> to A|B            -> move a server to another team")
+    print("  swap <n1> <n2>                  -> swap teams of two servers (example: swap 2 7)")
     print("")
-    print("  set <ms>                -> send SET_LATENCY <ms> to ALL servers")
-    print("  start_latency_loop      -> prompt duration + 4 latency values, then loop forever (ALL servers)")
+    print("  set <ms>                        -> send SET_LATENCY <ms> to ALL servers")
+    print("  start_latency_loop              -> prompt duration + 4 latency values, loop forever (ALL servers)")
     print("  start_latency_loop <mm:ss|sec> <lat1> <lat2> <lat3> <lat4>")
-    print("                          -> same as above, but no prompts")
-    print("")
-    print("  start_exp_1             -> OBS ON (all) + INPUT ON (all) + NO latency")
-    print("  start_exp_2             -> OBS ON (all) + INPUT ON (all) + Team A latency loop 0/50/100/200 every 5min")
-    print("  start_exp_3             -> OBS ON (all) + INPUT ON (all) + Team A latency loop 50/0/100/200 every 5min")
-    print("")
-    print("  stop                    -> stop schedule + STOP latency (all). If experiment active: OBS OFF (all) + INPUT OFF (all)")
-    print("  ping                    -> send PING to ALL servers")
-    print("  obs <ip> on [match]     -> start OBS recording on ONE server (server host == <ip>)")
-    print("  obs <ip> off            -> stop OBS recording on ONE server (server host == <ip>)")
-    print("  obs all on [match]      -> send OBS_ON_ALL to ALL servers")
-    print("  obs all off             -> send OBS_OFF_ALL to ALL servers")
-    print("  input on/off            -> send INPUT_ON / INPUT_OFF to ALL servers")
-    print("  quit                    -> stop schedule + send QUIT to ALL servers\n")
+    print("                                  -> same as above, but no prompts")
+    print("  start_exp_1                     -> OBS ALL ON + INPUT ON, no latency (STOP injector)")
+    print("  start_exp_2                     -> OBS ALL ON + INPUT ON + Team A shuffled discrete latency (0..100)")
+    print("  start_exp_3                     -> OBS ALL ON + INPUT ON + Team A random-walk sequence (1-min steps)")
+    print("  stop                            -> stop running schedule/exp + STOP latency injector;")
+    print("                                    if exp1/exp2/exp3: also OBS ALL OFF + INPUT OFF")
+    print("  ping                            -> send PING to ALL servers")
+    print("  obs <ip> on [match]             -> start OBS recording on ONE server (server host == <ip>)")
+    print("  obs <ip> off                    -> stop OBS recording on ONE server (server host == <ip>)")
+    print("  obs all on [match]              -> send OBS_ON_ALL to ALL servers")
+    print("  obs all off                     -> send OBS_OFF_ALL to ALL servers")
+    print("  input on/off                    -> send INPUT_ON / INPUT_OFF to ALL servers")
+    print("  quit                            -> stop schedule + send QUIT to ALL servers\n")
 
     while True:
         try:
@@ -622,6 +852,82 @@ def run_client(
         # server roster UI
         # ----------------
         if cmd == "servers":
+            pool.print_servers()
+            continue
+
+        # ----------------
+        # connect
+        # ----------------
+        if cmd == "connect":
+            targets = _parse_connect_targets(user)
+            if not targets:
+                print("[tcp_client] Usage: connect to <ip1> <ip2> ... (HOST[:PORT], commas allowed)")
+                continue
+
+            print("[tcp_client] Connecting to:")
+            for t in targets:
+                try:
+                    host, port = _parse_server_item(t, default_port=default_port)
+                except Exception as e:
+                    print(f"  ❌ {t} (invalid: {e})")
+                    continue
+
+                label = f"{host}:{port}"
+
+                # If already in pool, verify alive with PING.
+                existing = pool.get_by_label(label)
+                old_number = None
+                old_team = None
+                if existing is not None:
+                    try:
+                        pong = existing.send("PING")
+                        print(f"  ✅ {label} (already connected: {pong})")
+                        continue
+                    except Exception:
+                        old_number = existing.number
+                        old_team = existing.team
+                        print(f"  ⚠️  {label} (was connected but dead). Reconnecting...")
+                        pool.remove_label(label)
+
+                # Enforce max 10 servers
+                number = pool.allocate_number(max_n=10)
+                if number is None:
+                    print(f"  ❌ {label} (too many servers: max 10)")
+                    continue
+
+                conn = ServerConnection(
+                    host=host,
+                    port=port,
+                    client_name=client_name,
+                    connect_timeout_sec=connect_timeout_sec,
+                )
+                try:
+                    conn.connect()
+                except Exception as e:
+                    print(f"  ❌ {label} (connect failed: {e})")
+                    continue
+
+                # number/team assignment (preserve if reconnecting)
+                if old_number is not None and 1 <= old_number <= 10 and old_number not in pool.used_numbers():
+                    conn.number = old_number
+                else:
+                    conn.number = number
+
+                if old_team is not None:
+                    conn.team = old_team
+                else:
+                    team_a = pool.count_team("A")
+                    team_b = pool.count_team("B")
+                    if team_a < 5:
+                        conn.team = "A"
+                    elif team_b < 5:
+                        conn.team = "B"
+                    else:
+                        conn.team = "A" if team_a <= team_b else "B"
+
+                pool.add(conn)
+                print(f"  ✅ {label}  (# {conn.number}, Team {conn.team})")
+
             pool.print_servers()
             continue
 
@@ -684,55 +990,65 @@ def run_client(
                 pool.print_servers()
             continue
 
-        # --------------------------
-        # NEW: experiment convenience
-        # --------------------------
-        if cmd in ("start_exp_1", "start_exp_2", "start_exp_3"):
-            if exp_active is not None or scheduler.running():
-                print("[tcp_client] Something is already running (experiment or latency loop). Type 'stop' first.")
-                continue
+        # -------------------------
+        # Experiment start commands
+        # -------------------------
+        if cmd == "start_exp_1":
+            _stop_any_modes()
 
-            # Ensure no previous latency injector is active anywhere
-            print("[tcp_client] Clearing latency injector on ALL servers (STOP) ...")
-            _print_broadcast_results(pool.broadcast_collect("STOP"))
+            print("[tcp_client] start_exp_1: ensuring NO latency, turning OBS+INPUT ON (ALL servers).")
 
-            # Start recording + input for ALL
-            print("[tcp_client] Starting OBS recording on ALL servers ...")
-            _print_broadcast_results(pool.broadcast_collect("OBS_ON_ALL"))
+            res = pool.broadcast_collect("STOP")
+            _print_result_map("[tcp_server:", res)
 
-            print("[tcp_client] Turning INPUT ON on ALL servers ...")
-            _print_broadcast_results(pool.broadcast_collect("INPUT_ON"))
+            res = pool.broadcast_collect("OBS_ON_ALL")
+            _print_result_map("[tcp_server:", res)
 
-            if cmd == "start_exp_1":
-                # Baseline: no latency
-                exp_active = "exp1"
-                print("[tcp_client] start_exp_1 started (NO latency). Type 'stop' to end.")
-                continue
+            res = pool.broadcast_collect("INPUT_ON")
+            _print_result_map("[tcp_server:", res)
 
-            # Exp 2 / 3: latency schedule on Team A (team 1) only
-            team_target = "A"
-            if not pool.conns_for_team(team_target):
-                print("[tcp_client] No servers in Team A (team 1). Cannot start exp latency loop.")
-                print("[tcp_client] Tip: type 'servers' and use 'move <n> to A' to assign servers to Team A.")
-                # roll back to avoid leaving them on in a failed start
-                print("[tcp_client] Rolling back: stopping OBS (all) and INPUT (all) ...")
-                _print_broadcast_results(pool.broadcast_collect("OBS_OFF_ALL"))
-                _print_broadcast_results(pool.broadcast_collect("INPUT_OFF"))
-                continue
+            exp_mode = "exp1"
+            print("[tcp_client] EXP1 started. Type 'stop' to end EXP1 (OBS OFF + INPUT OFF).")
+            continue
 
-            interval_sec = 5 * 60  # 5 minutes
-            if cmd == "start_exp_2":
-                lat_order = [0, 50, 100, 200]
-                exp_active = "exp2"
-                print("[tcp_client] start_exp_2 started (Team A latency: 0 -> 50 -> 100 -> 200, every 5 min).")
-            else:
-                lat_order = [50, 0, 100, 200]
-                exp_active = "exp3"
-                print("[tcp_client] start_exp_3 started (Team A latency: 50 -> 0 -> 100 -> 200, every 5 min).")
+        if cmd == "start_exp_2":
+            _stop_any_modes()
 
-            schedule_items = build_latency_loop_schedule(interval_sec, lat_order)
-            scheduler.start(schedule_items, loop=True, team=team_target)
-            print("[tcp_client] Type 'stop' to end.")
+            print("[tcp_client] start_exp_2: resetting latency, turning OBS+INPUT ON (ALL servers),")
+            print("[tcp_client] then starting Team A shuffled discrete latency schedule (0..100ms, 5min blocks).")
+
+            res = pool.broadcast_collect("STOP")
+            _print_result_map("[tcp_server:", res)
+
+            res = pool.broadcast_collect("OBS_ON_ALL")
+            _print_result_map("[tcp_server:", res)
+
+            res = pool.broadcast_collect("INPUT_ON")
+            _print_result_map("[tcp_server:", res)
+
+            exp2_runner.start()
+            exp_mode = "exp2"
+            print("[tcp_client] EXP2 started. Type 'stop' to end EXP2 (OBS OFF + INPUT OFF + STOP latency).")
+            continue
+
+        if cmd == "start_exp_3":
+            _stop_any_modes()
+
+            print("[tcp_client] start_exp_3: resetting latency, turning OBS+INPUT ON (ALL servers),")
+            print("[tcp_client] then starting Team A random-walk sequence (1-min steps, 30-min cycles).")
+
+            res = pool.broadcast_collect("STOP")
+            _print_result_map("[tcp_server:", res)
+
+            res = pool.broadcast_collect("OBS_ON_ALL")
+            _print_result_map("[tcp_server:", res)
+
+            res = pool.broadcast_collect("INPUT_ON")
+            _print_result_map("[tcp_server:", res)
+
+            exp3_runner.start()
+            exp_mode = "exp3"
+            print("[tcp_client] EXP3 started. Type 'stop' to end EXP3 (OBS OFF + INPUT OFF + STOP latency).")
             continue
 
         # ----------------
@@ -750,21 +1066,21 @@ def run_client(
                 print("[tcp_client] Latency must be an integer >= 0")
                 continue
 
-            _print_broadcast_results(pool.broadcast_collect(f"SET_LATENCY {ms}"))
+            res = pool.broadcast_collect(f"SET_LATENCY {ms}")
+            for lbl, resp in res.items():
+                print(f"[tcp_server:{lbl}] {resp}")
             continue
 
-        # CHANGED: "start" is deprecated -> redirect to start_latency_loop prompts
+        # "start" is deprecated -> redirect to start_latency_loop
         if cmd == "start":
             print("[tcp_client] 'start' is deprecated. Use 'start_latency_loop'.")
             cmd = "start_latency_loop"
 
         if cmd == "start_latency_loop":
-            # Two modes:
-            #   1) start_latency_loop                       -> prompt for duration and 4 latencies
-            #   2) start_latency_loop 00:05 0 50 100 200    -> no prompts
-            if exp_active is not None:
-                print("[tcp_client] An experiment is active. Type 'stop' first.")
-                continue
+            # Starting manual schedule cancels experiment modes (but does not turn off OBS/INPUT).
+            if exp_mode is not None:
+                print("[tcp_client] Stopping current experiment mode before starting manual latency loop.")
+            _stop_any_modes()
 
             duration_sec: Optional[float] = None
             latencies: List[int] = []
@@ -799,33 +1115,36 @@ def run_client(
                     continue
 
             schedule_items = build_latency_loop_schedule(duration_sec, latencies)
-            scheduler.start(schedule_items, loop=True, team=None)  # ALL
+            scheduler.start(schedule_items, loop=True)
             continue
 
         if cmd == "stop":
-            # stop schedule thread first
+            # stop background work
             scheduler.stop()
+            exp2_runner.stop()
+            exp3_runner.stop()
 
-            # If experiment is active: also stop OBS + INPUT, then stop latency injector.
-            if exp_active is not None:
-                print("[tcp_client] Stopping experiment: OBS OFF (all) ...")
-                _print_broadcast_results(pool.broadcast_collect("OBS_OFF_ALL"))
+            # If we're in exp1/exp2/exp3, also stop OBS and INPUT
+            if exp_mode in ("exp1", "exp2", "exp3"):
+                print("[tcp_client] stop: ending experiment -> OBS OFF ALL + INPUT OFF")
+                res = pool.broadcast_collect("OBS_OFF_ALL")
+                _print_result_map("[tcp_server:", res)
 
-                print("[tcp_client] Stopping experiment: INPUT OFF (all) ...")
-                _print_broadcast_results(pool.broadcast_collect("INPUT_OFF"))
+                res = pool.broadcast_collect("INPUT_OFF")
+                _print_result_map("[tcp_server:", res)
 
-            # Always stop latency injector as previous design
-            print("[tcp_client] Stopping latency injector on ALL servers (STOP) ...")
-            _print_broadcast_results(pool.broadcast_collect("STOP"))
+            # Always stop latency injector on all servers
+            res = pool.broadcast_collect("STOP")
+            _print_result_map("[tcp_server:", res)
 
-            if exp_active is not None:
-                print(f"[tcp_client] Experiment '{exp_active}' stopped.")
-                exp_active = None
-
+            exp_mode = None
+            print("[tcp_client] Stopped.\n")
             continue
 
         if cmd == "ping":
-            _print_broadcast_results(pool.broadcast_collect("PING"))
+            res = pool.broadcast_collect("PING")
+            for lbl, resp in res.items():
+                print(f"[tcp_server:{lbl}] {resp}")
             continue
 
         # OBS CONTROL
@@ -851,7 +1170,9 @@ def run_client(
                 else:
                     server_cmd = "OBS_OFF_ALL"
 
-                _print_broadcast_results(pool.broadcast_collect(server_cmd))
+                res = pool.broadcast_collect(server_cmd)
+                for lbl, resp in res.items():
+                    print(f"[tcp_server:{lbl}] {resp}")
                 continue
 
             # Target ONE server (host == ip)
@@ -887,24 +1208,32 @@ def run_client(
             sub = parts[1].lower()
             server_cmd = "INPUT_ON" if sub == "on" else "INPUT_OFF"
 
-            _print_broadcast_results(pool.broadcast_collect(server_cmd))
+            res = pool.broadcast_collect(server_cmd)
+            for lbl, resp in res.items():
+                print(f"[tcp_server:{lbl}] {resp}")
             continue
 
         if cmd == "quit":
-            # If an experiment is active, behave like "stop" first (so OBS/app doesn't keep running)
-            scheduler.stop()
-            if exp_active is not None:
-                print("[tcp_client] Quitting: stopping active experiment first (OBS OFF + INPUT OFF + STOP) ...")
-                _print_broadcast_results(pool.broadcast_collect("OBS_OFF_ALL"))
-                _print_broadcast_results(pool.broadcast_collect("INPUT_OFF"))
-                _print_broadcast_results(pool.broadcast_collect("STOP"))
-                exp_active = None
+            # stop all background work
+            if scheduler.running():
+                scheduler.stop()
+            exp2_runner.stop()
+            exp3_runner.stop()
 
-            _print_broadcast_results(pool.broadcast_collect("QUIT"))
+            # If in experiment, try to turn off OBS/input too
+            if exp_mode in ("exp1", "exp2", "exp3"):
+                pool.broadcast_collect("OBS_OFF_ALL")
+                pool.broadcast_collect("INPUT_OFF")
+
+            # Stop injectors & quit servers
+            pool.broadcast_collect("STOP")
+            res = pool.broadcast_collect("QUIT")
+            for lbl, resp in res.items():
+                print(f"[tcp_server:{lbl}] {resp}")
             pool.close_all()
             return 0
 
-        print("[tcp_client] Unknown command. Use: servers/set/start_latency_loop/start_exp_1/start_exp_2/start_exp_3/stop/ping/obs/input/quit")
+        print("[tcp_client] Unknown command. Use: servers/connect/delete/move/swap/set/start_latency_loop/start_exp_1/start_exp_2/start_exp_3/stop/ping/obs/input/quit")
 
 
 def _cli() -> int:
@@ -940,6 +1269,7 @@ def _cli() -> int:
         servers=servers,
         client_name=args.client_name,
         connect_timeout_sec=args.connect_timeout,
+        default_port=args.server_port,
     )
 
 
