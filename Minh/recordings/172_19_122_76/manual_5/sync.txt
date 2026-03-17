@@ -1,4 +1,0 @@
-Game IP: 172.19.122.76
-OBS Host: 172.19.122.76:4455
-Recording started: 2026-02-24 14:08:22
-Match ID: manual
