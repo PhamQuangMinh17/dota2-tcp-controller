@@ -4,4 +4,4 @@ __pycache__/
 *.pid
 *.log
 .vscode/
-recordings/
+**/recordings/
